@@ -14,7 +14,7 @@ Construir una aplicacion web Fullstack con arquitectura hibrida:
 - SQL (MySQL o PostgreSQL) para integridad y consistencia.
 - MongoDB para lecturas documentales rapidas.
 - Backend Node.js + Express (API REST).
-- Frontend SPA con Vite + JavaScript + HTML + CSS.
+- Frontend basico y presentable con JavaScript + HTML + CSS (Vite opcional).
 
 ## Competencias a evaluar
 - Normalizacion hasta 3FN.
@@ -23,7 +23,7 @@ Construir una aplicacion web Fullstack con arquitectura hibrida:
 - Migracion/importacion de datos desde Excel.
 - Diferencias y consistencia entre SQL y NoSQL.
 - Consultas SQL avanzadas y vistas.
-- Exposicion por API y consumo desde SPA.
+- Exposicion por API y consumo desde frontend basico.
 
 ## PARTE 0 - DER (OBLIGATORIO)
 Antes de programar, debes entregar un DER con:
@@ -96,7 +96,7 @@ Debes implementar como minimo estas consultas:
 
 ### Condicion critica
 - Ninguna consulta vale si queda solo en SQL.
-- Todas deben tener endpoint en Express, consumo en frontend y visualizacion en interfaz.
+- Todas deben tener endpoint en Express y evidencia de prueba en Postman.
 
 ## PARTE 5 - Vistas SQL (OBLIGATORIAS)
 Crear minimo:
@@ -105,7 +105,7 @@ Crear minimo:
 
 Estas vistas deben:
 - Tener endpoints propios.
-- Consumirse desde el frontend.
+- Poder probarse por endpoint (Postman).
 - Mostrar datos reales.
 
 ## PARTE 6 - Backend Express (OBLIGATORIO)
@@ -144,18 +144,21 @@ Estas vistas deben:
 ### Migracion
 - `POST /api/migration/upload`
 
-## PARTE 7 - Frontend SPA (OBLIGATORIO)
-La SPA debe incluir:
+## PARTE 7 - Frontend basico (OBLIGATORIO)
+El frontend debe incluir:
 - Dashboard con metricas clave.
-- CRUD de clientes.
-- CRUD de plataformas.
-- Gestion/listado de asesores.
-- Vista de reportes SQL.
-- Vista de vistas SQL.
-- Vista de feedback e historial Mongo.
-- Carga de archivo para migracion.
+- CRUD completo de una entidad principal (recomendado: `clients`).
+- Vista simple para consultar reportes clave.
 - Formularios con validaciones.
-- Pantalla para cada consulta SQL obligatoria.
+- Interfaz limpia, legible y facil de usar.
+- Puede usar Bootstrap, Tailwind o Bulma.
+
+### Criterios de aceptacion del frontend
+- Permite crear, listar, editar y eliminar registros de la entidad principal.
+- Incluye validaciones de formulario antes de enviar datos.
+- Consume correctamente la API del backend.
+- Presenta un dashboard minimo funcional.
+- Diseno basico, ordenado y usable.
 
 ## PARTE 8 - Requisitos tecnicos
 Debe evidenciarse uso de:
@@ -209,7 +212,7 @@ Debe evidenciarse uso de:
 - Script o modulo de migracion idempotente.
 - Base SQL poblada.
 - Base MongoDB poblada.
-- SPA funcional consumiendo la API.
+- Frontend basico funcional (dashboard + CRUD principal) consumiendo la API.
 - README con decisiones tecnicas y evidencias.
 
 ## Criterios de evaluacion (100%)
@@ -218,7 +221,7 @@ Debe evidenciarse uso de:
 - Migracion idempotente Excel -> SQL + Mongo: 20%
 - API backend y arquitectura por capas: 20%
 - Consultas SQL + vistas + endpoints: 15%
-- Frontend SPA y consumo de API: 10%
+- Frontend basico funcional y consumo de API: 10%
 
 ## Bonus (opcional)
 - Exportar reportes en PDF.
@@ -232,7 +235,7 @@ Debe evidenciarse uso de:
 - Modelo SQL + vistas: 2h
 - Migracion: 1.5h
 - Backend: 2h
-- Frontend: 1h
+- Frontend basico: 1h
 - Pruebas + README: 0.5h
 
 ## Anexo - Evaluacion SQL estricta (adicional, sin reemplazar lo anterior)
@@ -279,3 +282,10 @@ Este anexo complementa el enunciado y refuerza los criterios del enfoque SQL del
 - Sin script DDL (`sql/database.sql`): proyecto incompleto.
 - Sin coleccion Postman: proyecto incompleto.
 - Sin README en ingles: proyecto incompleto.
+
+### 9) Rubrica adicional de evaluacion (100 puntos)
+- MER completamente normalizado, explicado y justificado con argumentos solidos y claros: 20 puntos.
+- CRUD robusto, bien estructurado, con manejo avanzado de relaciones y validaciones complejas, permitiendo la carga masiva de datos con CSV: 20 puntos.
+- Base de datos completamente consistente, altamente estructurada, segura y optimizada: 20 puntos.
+- Codigo altamente organizado, escalable, reutilizable y bien comentado: 20 puntos.
+- README profesional, incluye guia tecnica, justificacion, recursos y documentacion: 20 puntos.
