@@ -1,7 +1,6 @@
 # Enunciado Integrado - Modulo 4 Bases de Datos Fullstack (ExpertSoft Fintech)
 
 ## Datos generales
-- Clan: Hamilton
 - Duracion maxima: 8 horas
 - Modalidad: Individual
 
