@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Generico - ExpertSoft Test Front</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>CRUD Generico (Template Reutilizable)</h1>
+      <nav class="nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/clients.html">Clientes</a>
+        <a href="/reports.html">Reportes</a>
+        <a href="/history.html">Historial</a>
+        <a href="/migration.html">Migracion</a>
+        <a href="/generic.html" class="active">Generico</a>
+      </nav>
+    </header>
+
+    <main class="container grid-2">
+      <section class="card wide">
+        <h2>Seleccion de recurso</h2>
+        <form id="form-resource" class="inline-form">
+          <select id="resource-select" required></select>
+          <button type="button" id="btn-load-resource">Cargar recurso</button>
+          <button type="button" id="btn-list-resource">Listar</button>
+        </form>
+        <p class="hint">
+          Los campos se construyen desde <code>GET /api/meta/resources</code>. Para otro dominio solo cambia
+          metadata + tablas.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Buscar por ID</h2>
+        <form id="form-get-by-id" class="inline-form">
+          <input id="record-id-input" type="number" min="1" required />
+          <button type="submit">GET /api/generic/:resource/:id</button>
+        </form>
+        <pre id="single-record-output" class="output"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Eliminar por ID</h2>
+        <form id="form-delete-by-id" class="inline-form">
+          <input id="delete-id-input" type="number" min="1" required />
+          <button type="submit" class="danger">DELETE /api/generic/:resource/:id</button>
+        </form>
+        <pre id="delete-record-output" class="output"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Crear registro</h2>
+        <form id="form-create-generic" class="stack"></form>
+      </section>
+
+      <section class="card">
+        <h2>Actualizar registro</h2>
+        <form id="form-update-generic" class="stack"></form>
+      </section>
+
+      <section class="card wide">
+        <h2>Respuesta</h2>
+        <pre id="generic-feedback" class="output"></pre>
+      </section>
+
+      <section class="card wide">
+        <h2>Tabla</h2>
+        <div id="generic-table"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/generic.js"></script>
+  </body>
+</html>

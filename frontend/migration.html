@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migracion - ExpertSoft Test Front</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Migracion de Datos</h1>
+      <nav class="nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/clients.html">Clientes</a>
+        <a href="/reports.html">Reportes</a>
+        <a href="/history.html">Historial</a>
+        <a href="/migration.html" class="active">Migracion</a>
+        <a href="/generic.html">Generico</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Subir archivo Excel/CSV</h2>
+        <form id="form-migration" class="stack">
+          <input name="file" type="file" accept=".xlsx,.xls,.csv" required />
+          <button type="submit">POST /api/migration/upload</button>
+        </form>
+        <p class="hint">Campo requerido por backend: <code>file</code></p>
+      </section>
+
+      <section class="card">
+        <h2>Respuesta de migracion</h2>
+        <pre id="migration-feedback" class="output"></pre>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/migration.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "collections": [
+    {
+      "name": "client_histories",
+      "description": "Document per client with consolidated financial transaction history.",
+      "schema": {
+        "clientEmail": "string",
+        "clientName": "string",
+        "identification": "string",
+        "transactions": [
+          {
+            "txnCode": "string",
+            "date": "date",
+            "platform": "string",
+            "invoiceNumber": "string",
+            "amount": "number",
+            "status": "string",
+            "transactionType": "string"
+          }
+        ],
+        "updatedAt": "date"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes - ExpertSoft Test Front</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Reportes (MySQL)</h1>
+      <nav class="nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/clients.html">Clientes</a>
+        <a href="/reports.html" class="active">Reportes</a>
+        <a href="/history.html">Historial</a>
+        <a href="/migration.html">Migracion</a>
+        <a href="/generic.html">Generico</a>
+      </nav>
+    </header>
+
+    <main class="container grid-2">
+      <section class="card">
+        <h2>Total pagado por cliente</h2>
+        <button id="btn-total-paid" type="button">GET /api/reports/total-paid-by-client</button>
+      </section>
+
+      <section class="card">
+        <h2>Facturas pendientes</h2>
+        <button id="btn-pending-invoices" type="button">GET /api/reports/pending-invoices</button>
+      </section>
+
+      <section class="card wide">
+        <h2>Transacciones por plataforma</h2>
+        <form id="form-platform-report" class="inline-form">
+          <input name="platform" type="text" placeholder="Nequi" required />
+          <button type="submit">GET /api/reports/transactions-by-platform</button>
+        </form>
+      </section>
+
+      <section class="card wide">
+        <h2>Respuesta</h2>
+        <pre id="reports-feedback" class="output"></pre>
+      </section>
+
+      <section class="card wide">
+        <h2>Resultado del reporte</h2>
+        <div id="report-table"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/reports.js"></script>
+  </body>
+</html>

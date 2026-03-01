@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial - ExpertSoft Test Front</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Historial de Cliente (MongoDB)</h1>
+      <nav class="nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/clients.html">Clientes</a>
+        <a href="/reports.html">Reportes</a>
+        <a href="/history.html" class="active">Historial</a>
+        <a href="/migration.html">Migracion</a>
+        <a href="/generic.html">Generico</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Buscar historial por correo</h2>
+        <form id="form-history" class="inline-form">
+          <input name="email" type="email" placeholder="cliente@mail.com" required />
+          <button type="submit">GET /api/clients/:email/history</button>
+        </form>
+        <pre id="history-feedback" class="output"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Documento completo</h2>
+        <pre id="history-doc" class="output"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Transacciones</h2>
+        <div id="history-table"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/history.js"></script>
+  </body>
+</html>

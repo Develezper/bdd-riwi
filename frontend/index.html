@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpertSoft Test Front</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>ExpertSoft Fintech - Front de Pruebas</h1>
+      <nav class="nav">
+        <a href="/index.html" class="active">Inicio</a>
+        <a href="/clients.html">Clientes</a>
+        <a href="/reports.html">Reportes</a>
+        <a href="/history.html">Historial</a>
+        <a href="/migration.html">Migracion</a>
+        <a href="/generic.html">Generico</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Estado del Backend</h2>
+        <p>Este frontend usa proxy de Vite para llamar a `http://localhost:3000`.</p>
+        <button id="btn-health" type="button">Probar /health</button>
+        <pre id="health-output" class="output"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Flujo sugerido</h2>
+        <ol>
+          <li>Subir `data.xlsx` en Migracion.</li>
+          <li>Validar CRUD en Clientes.</li>
+          <li>Verificar consultas en Reportes.</li>
+          <li>Consultar historial por correo en Historial.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>
